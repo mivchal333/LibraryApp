@@ -10,4 +10,5 @@
     <string name="button_save">Save</string>
     <string name="empty_not_saved">Book not saved because there are empty fields</string>
     <string name="book_added">Book has been successfully saved</string>
+    <string name="todo">TODO</string>
 </resources>

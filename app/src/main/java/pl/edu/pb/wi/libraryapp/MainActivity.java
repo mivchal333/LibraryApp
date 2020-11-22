@@ -80,10 +80,10 @@ public class MainActivity extends AppCompatActivity {
             Book book = new Book(data.getStringExtra(EditBookActivity.EXTRA_EDIT_BOOK_TITLE),
                     data.getStringExtra(EditBookActivity.EXTRA_EDIT_BOOK_AUTHOR));
             bookViewModel.insert(book);
-            Snackbar.make(findViewById(R.id.main_layout), getString(R.string.book_added),
+            Snackbar.make(findViewById(R.id.coordinator_layout), getString(R.string.book_added),
                     Snackbar.LENGTH_LONG).show();
         } else {
-            Snackbar.make(findViewById(R.id.main_layout),
+            Snackbar.make(findViewById(R.id.coordinator_layout),
                     getString(R.string.empty_not_saved),
                     Snackbar.LENGTH_LONG)
                     .show();
