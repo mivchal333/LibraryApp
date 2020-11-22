@@ -11,12 +11,12 @@ import pl.edu.pb.wi.libraryapp.database.dao.BookDao;
 import pl.edu.pb.wi.libraryapp.database.entity.Book;
 
 public class BookRepository {
-    private BookDao bookDao;
+    private final BookDao bookDao;
     private final LiveData<List<Book>> books;
 
     public BookRepository(Application application) {
         BookDatabase database = BookDatabase.getDatabase(application);
-        BookDao bookDao = database.bookDao();
+        bookDao = database.bookDao();
         books = bookDao.findAll();
     }
 

@@ -33,4 +33,9 @@ public class Book {
     public void setAuthor(String author) {
         this.author = author;
     }
+
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
 }
