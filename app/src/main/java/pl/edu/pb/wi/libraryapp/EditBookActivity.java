@@ -21,9 +21,13 @@ public class EditBookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_book);
 
+
         editTitleEditText = findViewById(R.id.edit_book_title);
         editAuthorEditText = findViewById(R.id.edit_book_author);
-
+        if (getIntent().hasExtra(EXTRA_EDIT_BOOK_TITLE)) {
+            editTitleEditText.setText(getIntent().getStringExtra(EXTRA_EDIT_BOOK_TITLE));
+            editAuthorEditText.setText(getIntent().getStringExtra(EXTRA_EDIT_BOOK_AUTHOR));
+        }
         final Button button = findViewById(R.id.button_save);
         button.setOnClickListener(e -> {
             Intent replyIntent = new Intent();
